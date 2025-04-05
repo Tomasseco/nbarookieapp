@@ -7,14 +7,14 @@ import { CommonModule } from '@angular/common';
 import { LoadingController } from '@ionic/angular'; 
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
   standalone: true,
   imports: [IonicModule, ReactiveFormsModule, CommonModule],
 })
 
-export class HomePage implements OnInit {
+export class LoginPage  implements OnInit {
 
   loginForm!: FormGroup;
   private loginService = inject(AuthService);

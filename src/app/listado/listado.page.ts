@@ -25,7 +25,7 @@ export class ListadoPage implements OnInit {
         console.log("User is logged in:", this.user); // Verifica que el usuario esté logueado
       } else {
         console.log("User is not logged in. Redirecting...");  // Verificar si no está logueado
-        this.router.navigate(['/home']);  // Redirigir al home si no está logueado
+        this.router.navigate(['/login']);  // Redirigir al home si no está logueado
       }
     });
   }

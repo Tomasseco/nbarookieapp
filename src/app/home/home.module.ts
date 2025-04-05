@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
-
+import { AuthService } from '../services/auth.service'; 
 import { HomePageRoutingModule } from './home-routing.module';
 
 
@@ -14,6 +14,6 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+   providers: [AuthService, HomePage]
 })
 export class HomePageModule {}

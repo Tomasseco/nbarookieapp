@@ -25,3 +25,32 @@
 #container a {
   text-decoration: none;
 }
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Usa toda la altura de la pantalla */
+}
+
+.login-card {
+  border-radius: 20px;
+  width: 90vw; /* 30% del ancho de la pantalla */
+  max-width: 420px; /* Evita que sea demasiado grande en pantallas grandes */
+  padding: 15px;
+
+}
+
+.boton-ingresar {
+  --background: #4caf50; /* Color de fondo */
+  --color: rgb(255, 255, 255); /* Color del texto */
+  --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.438); /* Sombra */
+  font-size: 15px; /* Tamaño de la fuente */
+  padding: 12px; /* Espaciado interno */
+}
+
+.register-link {
+  float: right;
+  color: #4caf50;
+  margin: 12px;
+}

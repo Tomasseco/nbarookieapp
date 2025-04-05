@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>Registro de usuario</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,20 +15,20 @@
     <div class="login-container">
       <ion-card class="login-card">
         <ion-card-header>
-          <ion-card-title>Login</ion-card-title>
+          <ion-card-title>Registro</ion-card-title>
         </ion-card-header>
   
         <ion-card-content>
-          <!-- Formulario de Login -->
-          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <!-- Formulario de Registro -->
+          <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
             <ion-input formControlName="email" label="Correo Electrónico" type="email"></ion-input>
-            <ion-text color="danger" *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched">
+            <ion-text color="danger" *ngIf="registroForm.get('email')?.hasError('email') && registroForm.get('email')?.touched">
               El correo electrónico ingresado no es válido.
             </ion-text>
             <ion-input formControlName="password" label="Contraseña" type="password"></ion-input>
   
-            <!-- Botón de login -->
-            <ion-button expand="block" class="boton-ingresar" type="submit" color="success">Login</ion-button>
+            <!-- Botón de Registro -->
+            <ion-button expand="block" class="boton-ingresar" type="submit" color="success">Registrar</ion-button>
           </form>
   
           <ion-toast
@@ -43,8 +43,8 @@
           message="{{ errorMessage }}"
           duration="5000">
         </ion-toast>
-        <!-- Enlace a la pantalla principal -->
-        <a class="register-link" href="/registro">¿No tienes cuenta? Registrate</a>
+          <!-- Enlace a la pantalla principal -->
+          <a class="register-link" href="/home">¿Ya tienes cuenta? Inicia sesión</a>
         </ion-card-content>
       </ion-card>
     </div>

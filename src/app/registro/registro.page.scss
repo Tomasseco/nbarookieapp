@@ -1,0 +1,28 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-card {
+  width: 90%;
+  max-width: 400px;
+}
+
+.boton-ingresar {
+  --background: #28a745; /* Botón de color verde */
+}
+
+.register-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+

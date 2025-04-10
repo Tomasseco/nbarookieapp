@@ -4,16 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ListadoPageRoutingModule } from './listado-routing.module';
-import { JugadorService } from '../services/jugadores.service';
+import { DetallePageRoutingModule } from './detalle-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ListadoPageRoutingModule
+    DetallePageRoutingModule
   ],
-   providers: [ListadoPageModule, JugadorService],
+  declarations: []
 })
-export class ListadoPageModule {}
+export class DetallePageModule {}

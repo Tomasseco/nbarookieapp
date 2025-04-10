@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle del Jugador</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleFavorito()">
+        <ion-icon
+          [name]="favorito ? 'heart' : 'heart-outline'"
+          slot="icon-only"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="jugador">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ jugador.nombre }} {{ jugador.apellidos }}</ion-card-title>
+      <ion-card-subtitle>{{ jugador.equipo }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Altura: {{ jugador.altura }}</p>
+      <p>Peso: {{ jugador.peso }}</p>
+      <p>Número: #{{ jugador.numero }}</p>
+      <p>Posición: {{ jugador.posicion }}</p>
+      <p>País: {{ jugador.pais }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

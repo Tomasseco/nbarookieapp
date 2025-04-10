@@ -4,13 +4,32 @@
     <ion-buttons slot="end">
       <ion-button class="btn-logout" (click)="logout()">Logout  [<span class="logout">{{ user!=null?user.email:'' }}</span>]</ion-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="camera" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">listado</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item
+      *ngFor="let jugador of jugadores"
+      [routerLink]="['/detalle', jugador.id]"
+      detail
+    >
+      <ion-label>
+        <h2>{{ jugador.nombre }} {{ jugador.apellidos }}</h2>
+        <p>Altura: {{ jugador.altura }}</p>
+        <p>Peso: {{ jugador.peso }}</p>
+        <p>Equipo: {{ jugador.equipo }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button fill="clear" color="primary">
+          <ion-icon name="share-social-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
 </ion-content>

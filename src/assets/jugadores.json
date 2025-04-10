@@ -1,0 +1,189 @@
+[
+    {
+      "id": 1,
+      "nombre": "LeBron",
+      "apellidos": "James",
+      "altura": "2.06m",
+      "peso": "113kg",
+      "equipo": "Los Angeles Lakers",
+      "pais": "EE.UU.",
+      "numero": 23,
+      "posicion": "Alero"
+    },
+    {
+      "id": 2,
+      "nombre": "Stephen",
+      "apellidos": "Curry",
+      "altura": "1.88m",
+      "peso": "84kg",
+      "equipo": "Golden State Warriors",
+      "pais": "EE.UU.",
+      "numero": 30,
+      "posicion": "Base"
+    },
+    {
+      "id": 3,
+      "nombre": "Kevin",
+      "apellidos": "Durant",
+      "altura": "2.06m",
+      "peso": "109kg",
+      "equipo": "Brooklyn Nets",
+      "pais": "EE.UU.",
+      "numero": 7,
+      "posicion": "Alero"
+    },
+    {
+      "id": 4,
+      "nombre": "Giannis",
+      "apellidos": "Antetokounmpo",
+      "altura": "2.11m",
+      "peso": "110kg",
+      "equipo": "Milwaukee Bucks",
+      "pais": "Grecia",
+      "numero": 34,
+      "posicion": "Ala-pívot"
+    },
+    {
+      "id": 5,
+      "nombre": "Kawhi",
+      "apellidos": "Leonard",
+      "altura": "1.98m",
+      "peso": "102kg",
+      "equipo": "Los Angeles Clippers",
+      "pais": "EE.UU.",
+      "numero": 2,
+      "posicion": "Alero"
+    },
+    {
+      "id": 6,
+      "nombre": "James",
+      "apellidos": "Harden",
+      "altura": "1.96m",
+      "peso": "100kg",
+      "equipo": "Brooklyn Nets",
+      "pais": "EE.UU.",
+      "numero": 13,
+      "posicion": "Escolta"
+    },
+    {
+      "id": 7,
+      "nombre": "Anthony",
+      "apellidos": "Davis",
+      "altura": "2.06m",
+      "peso": "115kg",
+      "equipo": "Los Angeles Lakers",
+      "pais": "EE.UU.",
+      "numero": 3,
+      "posicion": "Ala-pívot"
+    },
+    {
+      "id": 8,
+      "nombre": "Luka",
+      "apellidos": "Doncic",
+      "altura": "2.01m",
+      "peso": "104kg",
+      "equipo": "Dallas Mavericks",
+      "pais": "Eslovenia",
+      "numero": 77,
+      "posicion": "Base"
+    },
+    {
+      "id": 9,
+      "nombre": "Damian",
+      "apellidos": "Lillard",
+      "altura": "1.88m",
+      "peso": "88kg",
+      "equipo": "Portland Trail Blazers",
+      "pais": "EE.UU.",
+      "numero": 0,
+      "posicion": "Base"
+    },
+    {
+      "id": 10,
+      "nombre": "Joel",
+      "apellidos": "Embiid",
+      "altura": "2.13m",
+      "peso": "127kg",
+      "equipo": "Philadelphia 76ers",
+      "pais": "Camerún",
+      "numero": 21,
+      "posicion": "Pívot"
+    }, 
+    {
+      "id": 11,
+      "nombre": "Nikola",
+      "apellidos": "Jokic",
+      "altura": "2.13m",
+      "peso": "113kg",
+      "equipo": "Denver Nuggets",
+      "pais": "Serbia",
+      "numero": 15,
+      "posicion": "Pívot"
+    },
+    {
+      "id": 12,
+      "nombre": "Chris",
+      "apellidos": "Paul",
+      "altura": "1.85m",
+      "peso": "79kg",
+      "equipo": "Phoenix Suns",
+      "pais": "EE.UU.",
+      "numero": 3,
+      "posicion": "Base"
+    }, 
+    {
+      "id": 13,
+      "nombre": "Russell",
+      "apellidos": "Westbrook",
+      "altura": "1.91m",
+      "peso": "91kg",
+      "equipo": "Los Angeles Lakers",
+      "pais": "EE.UU.",
+      "numero": 0,
+      "posicion": "Base"
+    },
+    {
+      "id": 14,
+      "nombre": "Zion",
+      "apellidos": "Williamson",
+      "altura": "1.98m",
+      "peso": "129kg",
+      "equipo": "New Orleans Pelicans",
+      "pais": "EE.UU.",
+      "numero": 1,
+      "posicion": "Ala-pívot"
+    },  
+    {
+      "id": 15,
+      "nombre": "Jimmy",
+      "apellidos": "Butler",
+      "altura": "1.93m",
+      "peso": "104kg",
+      "equipo": "Miami Heat",
+      "pais": "EE.UU.",
+      "numero": 22,
+      "posicion": "Escolta"
+    },
+    {
+      "id": 16,
+      "nombre": "Kyrie",
+      "apellidos": "Irving",
+      "altura": "1.88m",
+      "peso": "88kg",
+      "equipo": "Brooklyn Nets",
+      "pais": "EE.UU.",
+      "numero": 11,
+      "posicion": "Base"
+    },
+    {
+      "id": 17,
+      "nombre": "Paul",
+      "apellidos": "George",
+      "altura": "2.01m",
+      "peso": "100kg",
+      "equipo": "Los Angeles Clippers",
+      "pais": "EE.UU.",
+      "numero": 13,
+      "posicion": "Alero"
+    }
+  ]

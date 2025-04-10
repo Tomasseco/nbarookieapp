@@ -3,37 +3,48 @@ import { AuthService } from '../services/auth.service';
 import { IonicModule } from '@ionic/angular'; 
 import { Router } from '@angular/router';
 import firebase from 'firebase/compat/app'; 
+import { CommonModule } from '@angular/common';
+import { JugadorService, Jugador } from '../services/jugadores.service';
+
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-listado',
   templateUrl: './listado.page.html',
   styleUrls: ['./listado.page.scss'],
   standalone: true,
-  imports: [IonicModule] 
+  imports: [CommonModule, IonicModule, RouterModule] 
 })
 export class ListadoPage implements OnInit {
-  user: firebase.User | null = null;  // Tipo de usuario usando la compatibilidad de Firebase
-  constructor(private authService: AuthService, private router: Router) { }
+  user: firebase.User | null = null; 
+  constructor(private authService: AuthService, private router: Router, private jugadoresService: JugadorService) { }
+  jugadores: Jugador[] = [];
+  favorito: boolean = false;
 
   ngOnInit() {
-    console.log("Checking user...");  // Para depuración
-    this.authService.getUser().subscribe(user => {
-      console.log("User from authService: ", user);  // Verificar si obtenemos el usuario correctamente
-      
+      this.authService.getUser().subscribe(user => {
+      // Verificar si el usuario está logueado    
       if (user) {
-        this.user = user;  // Si el usuario está logueado, asignar al campo user
-        console.log("User is logged in:", this.user); // Verifica que el usuario esté logueado
+        this.user = user;
       } else {
-        console.log("User is not logged in. Redirecting...");  // Verificar si no está logueado
-        this.router.navigate(['/login']);  // Redirigir al home si no está logueado
+        // Redirigir al login si no hay usuario 
+        this.router.navigate(['/login']);
       }
+
+      this.jugadoresService.getJugadores().subscribe((data: Jugador[]) => {
+        this.jugadores = data;
+      });
     });
+  }
+
+  toggleFavorito() {
+    this.favorito = !this.favorito;
   }
 
   logout() {
     this.authService.logout().then(() => {
-      console.log('User logged out');
-      this.router.navigate(['/home']);  // Redirigir al home o login después de hacer logout
+
+      this.router.navigate(['/login']);
     }).catch(error => {
       console.error('Error during logout:', error);
     });

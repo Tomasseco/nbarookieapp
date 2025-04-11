@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 
 export interface Jugador {

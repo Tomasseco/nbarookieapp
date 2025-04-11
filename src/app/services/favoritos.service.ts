@@ -1,5 +1,6 @@
+// src/app/services/favoritos.service.ts
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore'; // Asegúrate de que sea compat
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Jugador } from './jugadores.service';
 
 @Injectable({
@@ -17,21 +18,21 @@ export class FavoritosService {
       .set(jugador);
   }
 
-  eliminarFavorito(userId: string, jugadorId: number) {
+  eliminarFavorito(userId: string, jugadorId: string) {
     return this.firestore
       .collection('usuarios')
       .doc(userId)
       .collection('favoritos')
-      .doc(jugadorId.toString())
+      .doc(jugadorId)
       .delete();
   }
 
-  esFavorito(userId: string, jugadorId: number) {
+  esFavorito(userId: string, jugadorId: string) {
     return this.firestore
       .collection('usuarios')
       .doc(userId)
       .collection('favoritos')
-      .doc(jugadorId.toString())
+      .doc(jugadorId)
       .valueChanges();
   }
 }

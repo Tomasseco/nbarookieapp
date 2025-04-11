@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import firebase from 'firebase/compat/app'; 
 import { CommonModule } from '@angular/common';
 import { JugadorService, Jugador } from '../services/jugadores.service';
+import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule } from '@angular/router';
 
@@ -13,7 +14,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './listado.page.html',
   styleUrls: ['./listado.page.scss'],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule] 
+  imports: [CommonModule, IonicModule, RouterModule, HttpClientModule ] 
 })
 export class ListadoPage implements OnInit {
   user: firebase.User | null = null; 

@@ -1,23 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { DetallePage } from './detalle.page'; // Asegúrate de que esta ruta sea la misma en la que acabas de editar
 import { RouterModule, Routes } from '@angular/router';
+import { DetallePage } from './detalle.page'; // Importamos el componente independiente
 
 const routes: Routes = [
   {
     path: '',
-    component: DetallePage
+    component: DetallePage // Definimos el componente de la ruta
   }
 ];
 
 @NgModule({
-  declarations: [DetallePage],
   imports: [
     CommonModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    DetallePage // Importamos el componente aquí, ya que es standalone
   ]
 })
 export class DetallePageModule {}
-// Este módulo se encarga de cargar la página de detalle y sus dependencias.

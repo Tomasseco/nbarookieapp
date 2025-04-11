@@ -4,15 +4,20 @@ import { JugadorService, Jugador } from '../services/jugadores.service';
 import { FavoritosService } from '../services/favoritos.service';
 import { AuthService } from '../services/auth.service';
 import firebase from 'firebase/compat/app';
+import { IonicModule } from '@ionic/angular'; // Importamos IonicModule para registrar los componentes de Ionic
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-detalle',
   templateUrl: './detalle.page.html',
-  styleUrls: ['./detalle.page.scss']
+  styleUrls: ['./detalle.page.scss'],
+  standalone: true, // Esto indica que el componente es independiente
+  imports: [IonicModule, CommonModule, RouterModule]
 })
 export class DetallePage implements OnInit {
   user: firebase.User | null = null;
-  jugador: Jugador | undefined;
+  jugador: any = {}; 
   favorito: boolean = false;
 
   constructor(

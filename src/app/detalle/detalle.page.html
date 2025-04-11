@@ -15,15 +15,22 @@
 <ion-content *ngIf="jugador">
   <ion-card>
     <ion-card-header>
-      <ion-card-title>{{ jugador.nombre }} {{ jugador.apellidos }}</ion-card-title>
-      <ion-card-subtitle>{{ jugador.equipo }}</ion-card-subtitle>
+      <ion-card-title>{{ jugador?.nombre }} {{ jugador?.apellidos }}</ion-card-title>
+      <ion-card-subtitle>{{ jugador?.equipo }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      <p>Altura: {{ jugador.altura }}</p>
-      <p>Peso: {{ jugador.peso }}</p>
-      <p>Número: #{{ jugador.numero }}</p>
-      <p>Posición: {{ jugador.posicion }}</p>
-      <p>País: {{ jugador.pais }}</p>
+      <p>Altura: {{ jugador?.altura || 'No disponible' }}</p>
+      <p>Peso: {{ jugador?.peso || 'No disponible' }}</p>
+      <p>Número: #{{ jugador?.numero || 'No disponible' }}</p>
+      <p>Posición: {{ jugador?.posicion || 'No disponible' }}</p>
+      <p>País: {{ jugador?.pais || 'No disponible' }}</p>
     </ion-card-content>
   </ion-card>
+</ion-content>
+
+<!-- Mensaje de carga si no hay datos -->
+<ion-content *ngIf="!jugador">
+  <ion-text color="medium">
+    <p>Cargando detalles del jugador...</p>
+  </ion-text>
 </ion-content>

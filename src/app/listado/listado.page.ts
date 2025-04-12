@@ -8,7 +8,10 @@ import { JugadorService, Jugador } from '../services/jugadores.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { CameraServiceService } from '../services/camera-service.service';
+<<<<<<< HEAD
 import { ShareService } from '../services/share.service';
+=======
+>>>>>>> d06aa2ae62a789b64e344afe827be0eda2d7b162
 
 @Component({
   selector: 'app-listado',
@@ -25,10 +28,14 @@ export class ListadoPage implements OnInit {
   constructor(private authService: AuthService,
     private router: Router,
     private jugadoresService: JugadorService,
+<<<<<<< HEAD
     private camera: CameraServiceService,
     private share: ShareService
   ) { }
   
+=======
+    private camera: CameraServiceService) { }
+>>>>>>> d06aa2ae62a789b64e344afe827be0eda2d7b162
   jugadores: Jugador[] = [];
   favorito: boolean = false;
 
@@ -67,6 +74,11 @@ export class ListadoPage implements OnInit {
     this.imageUrl = await this.camera.takePicture();
     console.log('Image URL:', this.imageUrl);
     return this.imageUrl;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> d06aa2ae62a789b64e344afe827be0eda2d7b162
 }
 
   async compartirTexto(texto: string): Promise<void> {

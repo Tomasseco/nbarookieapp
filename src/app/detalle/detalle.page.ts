@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { JugadorService, Jugador } from '../services/jugadores.service';
+import { JugadorService } from '../services/jugadores.service';
 import { FavoritosService } from '../services/favoritos.service';
 import { AuthService } from '../services/auth.service';
 import firebase from 'firebase/compat/app';
-import { IonicModule } from '@ionic/angular'; // Importamos IonicModule para registrar los componentes de Ionic
+import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-detalle',
   templateUrl: './detalle.page.html',
   styleUrls: ['./detalle.page.scss'],
-  standalone: true, // Esto indica que el componente es independiente
+  standalone: true, 
   imports: [IonicModule, CommonModule, RouterModule]
 })
 export class DetallePage implements OnInit {
@@ -25,7 +26,7 @@ export class DetallePage implements OnInit {
     private jugadoresService: JugadorService,
     private authService: AuthService,
     private favoritosService: FavoritosService,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit() {
@@ -59,4 +60,7 @@ export class DetallePage implements OnInit {
         .then(() => this.favorito = true);
     }
   }
+  
+  
+
 }
